@@ -1,0 +1,148 @@
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  background-color: var(--navbar-bg);
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  letter-spacing: 0.05rem;
+  margin-left: 5vw;
+  transition: 0.2s;
+}
+
+.nav-brand a {
+  color: var(--accent);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-brand:hover {
+  opacity: 0.8;
+}
+
+.logo-icon {
+  font-size: 1.4rem;
+  margin-right: 4px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-right: 3vw;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links li {
+  display: block;
+}
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  color: white;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.nav-item.active {
+  color: var(--accent-light);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item .material-symbols-outlined {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* ===== Hamburger Menu ===== */
+.hamburger {
+  display: none;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+  padding: 5px;
+}
+
+.hamburger:hover {
+  color: rgb(200, 200, 200);
+}
+
+.hamburger .material-symbols-outlined {
+  font-size: 28px;
+}
+
+/* ===== Responsive Nav ===== */
+@media (max-width: 700px) {
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    margin-right: 20px;
+  }
+
+  .nav-links ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--navbar-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    gap: 0;
+    z-index: 99;
+  }
+
+  .nav-links ul.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    padding: 14px 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .nav-item:hover {
+    text-shadow: none;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}

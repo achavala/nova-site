@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nova - Settings">
+  <title>Nova - Settings</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/nav.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="index.html">
+        <span class="logo-icon">&#9733;</span> Nova
+      </a>
+    </div>
+    <div class="nav-links">
+      <ul>
+        <li><a href="games.html" class="nav-item"><span class="material-symbols-outlined">stadia_controller</span> Games</a></li>
+        <li><a href="apps.html" class="nav-item"><span class="material-symbols-outlined">apps</span> Apps</a></li>
+        <li><a href="settings.html" class="nav-item active"><span class="material-symbols-outlined">settings</span> Settings</a></li>
+      </ul>
+      <span class="hamburger" id="menuBtn">
+        <span class="material-symbols-outlined">menu</span>
+      </span>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-header">
+      <span class="page-title">Settings</span>
+      <p class="subtitle">Customize your Nova experience</p>
+    </div>
+    <div class="settings-grid">
+
+      <div class="setting-card">
+        <div class="setting-name">Tab Cloaking</div>
+        <p>Change the tab title and icon to disguise this page.</p>
+        <div class="setting-controls">
+          <select id="tabCloak">
+            <option value="none">None (Default)</option>
+            <option value="google">Google</option>
+            <option value="classroom">Google Classroom</option>
+            <option value="drive">Google Drive</option>
+            <option value="docs">Google Docs</option>
+            <option value="canvas">Canvas</option>
+          </select>
+        </div>
+        <span class="saved-msg" id="cloakSaved">Saved!</span>
+      </div>
+
+      <div class="setting-card">
+        <div class="setting-name">Search Engine</div>
+        <p>Choose your default search engine for the search bar.</p>
+        <div class="setting-controls">
+          <select id="searchEngine">
+            <option value="google">Google</option>
+            <option value="bing">Bing</option>
+            <option value="duckduckgo">DuckDuckGo</option>
+            <option value="yahoo">Yahoo</option>
+          </select>
+        </div>
+        <span class="saved-msg" id="engineSaved">Saved!</span>
+      </div>
+
+      <div class="setting-card">
+        <div class="setting-name">Panic Key</div>
+        <p>Press this key to instantly redirect to a safe page.</p>
+        <div class="setting-controls">
+          <select id="panicKey">
+            <option value="none">Disabled</option>
+            <option value="`">` (Backtick)</option>
+            <option value="Escape">Escape</option>
+            <option value="~">~ (Tilde)</option>
+          </select>
+        </div>
+        <span class="saved-msg" id="panicSaved">Saved!</span>
+      </div>
+
+      <div class="setting-card">
+        <div class="setting-name">Panic URL</div>
+        <p>The URL to redirect to when the panic key is pressed.</p>
+        <div class="setting-controls">
+          <input type="text" id="panicUrl" placeholder="https://classroom.google.com" class="setting-input">
+        </div>
+        <span class="saved-msg" id="panicUrlSaved">Saved!</span>
+      </div>
+
+      <div class="setting-card">
+        <div class="setting-name">Open in about:blank</div>
+        <p>Open Nova inside an about:blank tab to hide it from history.</p>
+        <div class="setting-controls">
+          <button class="btn" id="openBlank">Open in Blank Tab</button>
+        </div>
+      </div>
+
+      <div class="setting-card">
+        <div class="setting-name">Theme</div>
+        <p>Switch between dark themes for the site.</p>
+        <div class="setting-controls">
+          <select id="themeSelect">
+            <option value="default">Deep Space (Default)</option>
+            <option value="midnight">Midnight Blue</option>
+            <option value="forest">Dark Forest</option>
+            <option value="crimson">Crimson Night</option>
+          </select>
+        </div>
+        <span class="saved-msg" id="themeSaved">Saved!</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/settings.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
