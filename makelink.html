@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova - Make Your Own Link</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/nav.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><a href="index.html"><span class="logo-icon">&#9733;</span> Nova</a></div>
+    <div class="nav-links">
+      <ul>
+        <li><a href="unblockers.html" class="nav-item"><span class="material-symbols-outlined">vpn_lock</span> Unblockers</a></li>
+        <li><a href="games.html" class="nav-item"><span class="material-symbols-outlined">stadia_controller</span> Games</a></li>
+        <li><a href="movies.html" class="nav-item"><span class="material-symbols-outlined">movie</span> Movies</a></li>
+        <li><a href="makelink.html" class="nav-item active"><span class="material-symbols-outlined">add_link</span> Make Link</a></li>
+        <li><a href="cheats.html" class="nav-item"><span class="material-symbols-outlined">code</span> Cheats</a></li>
+        <li><a href="settings.html" class="nav-item"><span class="material-symbols-outlined">settings</span> Settings</a></li>
+      </ul>
+      <span class="hamburger" id="menuBtn"><span class="material-symbols-outlined">menu</span></span>
+    </div>
+  </nav>
+
+  <div class="page-content guide-page">
+    <div class="page-header">
+      <span class="page-title">Make Your Own Link</span>
+      <p class="subtitle">Create your own unblocker links using free DNS or deployment services</p>
+    </div>
+
+    <!-- TOC -->
+    <div class="guide-toc">
+      <h3>Table of Contents</h3>
+      <ul>
+        <li><a href="#freedns">Deploying via FreeDNS (free subdomain)</a></li>
+        <li><a href="#fastly">Deploying via Fastly</a></li>
+        <li><a href="#vercel">Deploying via Vercel (needs GitHub)</a></li>
+        <li><a href="#render">Deploying via Render (needs GitHub)</a></li>
+        <li><a href="#iptable">Unblocker IP Table</a></li>
+      </ul>
+    </div>
+
+    <!-- FreeDNS -->
+    <div class="guide-section" id="freedns">
+      <h2>Making Links via FreeDNS</h2>
+      <div class="guide-steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <p>Go to <a href="https://freedns.afraid.org/" target="_blank" rel="noopener">freedns.afraid.org</a>. If blocked, try on another device (you can't put this site through an unblocker).</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <p>Click <strong>"Sign Up for Free"</strong>. If you already have an account, skip to step 5.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <p>Fill out all the info. For name, use anything. For email, use a temp email provider like <a href="https://temp-mail.org/" target="_blank" rel="noopener">TempMail</a> or <a href="https://smailpro.com/" target="_blank" rel="noopener">SmailPro</a> so you can make more links in the future.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <p>Press sign-up and complete the email activation. If it errors out, just continue to the next step.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">5</span>
+          <p>Go to the <a href="https://freedns.afraid.org/domain/registry" target="_blank" rel="noopener">Shared Domain Registry</a>. Alternatively: Subdomains > Add subdomain > Domain dropdown > "many, many more" > Shared Domain Registry.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">6</span>
+          <p>Click a domain you'd like (e.g. chickenkiller.com). Pick one with low popularity - it's probably unblocked. Make sure it's public.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">7</span>
+          <p>Make sure <strong>"A" record type</strong> is selected at the top (should be default).</p>
+        </div>
+        <div class="step">
+          <span class="step-num">8</span>
+          <p>Enter any subdomain name (yourName.chosenDomain.com).</p>
+        </div>
+        <div class="step">
+          <span class="step-num">9</span>
+          <p>For the <strong>IP destination</strong>, use one from the <a href="#iptable">IP Table below</a>. Choose the unblocker you want.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">10</span>
+          <p>Press <strong>"Save"</strong>, complete the captcha, and wait a few minutes for your site to register!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fastly -->
+    <div class="guide-section" id="fastly">
+      <h2>Making Links via Fastly</h2>
+      <div class="guide-steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <p>Go to <a href="https://fastly.com" target="_blank" rel="noopener">fastly.com</a> and sign up for free. Use any name/company info and a temp email.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <p>Verify your account via email and log in.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <p>Go to <a href="https://manage.fastly.com/home" target="_blank" rel="noopener">manage.fastly.com/home</a>. Click <strong>CDN</strong> on the sidebar, then <strong>"Create service"</strong>.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <p>Service name: anything. Domain: <code>yourname.global.ssl.fastly.net</code></p>
+        </div>
+        <div class="step">
+          <span class="step-num">5</span>
+          <p>For the <strong>Origin (host)</strong>, put an unblocker URL. Don't include a path. Examples:</p>
+          <ul class="step-list">
+            <li>Astroid: <code>https://astroid.gg/</code></li>
+            <li>Rammerhead: <code>https://browser.rammerhead.org/</code></li>
+            <li>CanLite: <code>https://canlite.org/</code></li>
+          </ul>
+        </div>
+        <div class="step">
+          <span class="step-num">6</span>
+          <p>Click <strong>Activate</strong>. Then click "Edit Configuration" > "Clone Version 1 to edit".</p>
+        </div>
+        <div class="step">
+          <span class="step-num">7</span>
+          <p>Go to <strong>Settings</strong>, scroll to <strong>Fallback TTL</strong> and set it to <strong>0 seconds</strong>. Press Activate.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">8</span>
+          <p>Wait 30 seconds and test your link! If you get "503 Backend unavailable", the origin host doesn't work - try another one.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <strong>Troubleshooting:</strong> If it doesn't work, edit config > clone version > Settings > set Fallback TTL to 0, create a cache setting with TTL=0 and Stale TTL=0, activate, then purge all from service summary.
+      </div>
+    </div>
+
+    <!-- Vercel -->
+    <div class="guide-section" id="vercel">
+      <h2>Making Links via Vercel</h2>
+      <p class="guide-note">You need a GitHub account for this method.</p>
+      <div class="guide-steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <p>Use this URL format: <code>https://vercel.com/new/clone?repositoryurl=REPO_URL</code></p>
+          <p>Replace <code>REPO_URL</code> with an unblocker repo. Examples:</p>
+          <ul class="step-list">
+            <li>Interstellar: <code>https://github.com/InterstellarNetwork/Interstellar</code></li>
+            <li>Doge: <code>https://github.com/dogenetwork/v4</code></li>
+            <li>Utopia: <code>https://github.com/UtopiaUnblocker/Utopia</code></li>
+            <li>Abyss: <code>https://github.com/AbyssServices/Abyss-Web</code></li>
+            <li>Astroid: <code>https://github.com/VyperGroup/astroidv3</code></li>
+            <li>Shuttle: <code>https://github.com/shuttlenetwork/shuttle</code></li>
+            <li>Snorlax: <code>https://github.com/Snorlaxs-Cave/Snorlaxs-Cave-v2</code></li>
+            <li>Artclass: <code>https://github.com/art-class/v4</code></li>
+          </ul>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <p>Log in to Vercel with GitHub (sign up if needed).</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <p>Enter any repository name and click <strong>"Create"</strong>.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <p>After a few moments, your link will be: <code>repoName.vercel.app</code></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Render -->
+    <div class="guide-section" id="render">
+      <h2>Making Links via Render</h2>
+      <p class="guide-note">You need a GitHub account for this method.</p>
+      <div class="guide-steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <p>Go to <a href="https://render.com" target="_blank" rel="noopener">render.com</a> and sign up with GitHub.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <p>Fork an unblocker repository on GitHub first (see Vercel section for repo links).</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <p>On Render, click <strong>"New" > "Web Service"</strong> and connect your forked repo.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <p>Set the build and start commands (usually <code>npm install</code> and <code>npm start</code>). Choose the free plan and click <strong>Deploy</strong>.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">5</span>
+          <p>Your link will be: <code>repoName.onrender.com</code></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- IP Table -->
+    <div class="guide-section" id="iptable">
+      <h2>Unblocker IP Table</h2>
+      <p class="guide-note">Use these IPs as the destination when setting up FreeDNS links.</p>
+      <div class="table-wrapper">
+        <table class="ip-table">
+          <thead>
+            <tr><th>Unblocker</th><th>Type</th><th>IP Address</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Abyss</td><td>Web browser</td><td><code>5.161.43.35</code></td></tr>
+            <tr><td>Astroid</td><td>Games, Unblocker, Emulators, Apps</td><td><code>152.53.53.8</code></td></tr>
+            <tr><td>Artclass</td><td>Unblocker, Games, Apps</td><td><code>198.251.90.4</code></td></tr>
+            <tr><td>Shadow</td><td>Web Browser</td><td><code>104.243.38.18</code></td></tr>
+            <tr><td>Kazwire</td><td>Proxy, Games, Apps</td><td><code>103.195.102.132</code></td></tr>
+            <tr><td>Plexile Arcade</td><td>Proxy, Games, Apps</td><td><code>104.243.41.121</code></td></tr>
+            <tr><td>Doge Unblocker</td><td>Proxy, Games, Apps</td><td><code>38.175.196.242</code></td></tr>
+            <tr><td>Interstellar</td><td>Proxy, Games, Apps</td><td><code>66.23.193.126</code></td></tr>
+            <tr><td>Rammerhead</td><td>Web Browser</td><td><code>108.181.32.77</code></td></tr>
+            <tr><td>Phantom Games</td><td>Tons of Games</td><td><code>109.122.46.55</code></td></tr>
+            <tr><td>Arsenic</td><td>Proxy, Games</td><td><code>66.179.254.164</code></td></tr>
+            <tr><td>Emerald</td><td>Proxy, Games, Apps</td><td><code>66.23.198.136</code></td></tr>
+            <tr><td>Snorlax's Cave</td><td>Proxy, Games, Apps</td><td><code>85.114.138.30</code></td></tr>
+            <tr><td>DayDreamX</td><td>Web Browser</td><td><code>104.243.45.193</code></td></tr>
+            <tr><td>Svzy Central</td><td>Proxy, Games, Apps</td><td><code>152.53.38.100</code></td></tr>
+            <tr><td>Space</td><td>Proxy, Games, Apps</td><td><code>104.243.38.145</code></td></tr>
+            <tr><td>Selenite</td><td>Tons of Games</td><td><code>65.109.112.222</code></td></tr>
+            <tr><td>Meximath</td><td>Proxy, Games, Apps, Tools</td><td><code>152.53.80.107</code></td></tr>
+            <tr><td>GalaxyV6</td><td>OS</td><td><code>51.222.141.2</code></td></tr>
+            <tr><td>Glint</td><td>Web Browser</td><td><code>5.188.124.13</code></td></tr>
+            <tr><td>Bromine</td><td>Proxy</td><td><code>129.153.136.235</code></td></tr>
+            <tr><td>Jordan's Math Work</td><td>Games</td><td><code>37.27.88.135</code></td></tr>
+            <tr><td>Quesar</td><td>Proxy</td><td><code>92.38.177.16</code></td></tr>
+            <tr><td>Duck Math</td><td>Games</td><td><code>198.251.83.251</code></td></tr>
+            <tr><td>Frogie's Arcade</td><td>Proxies, Games</td><td><code>69.164.251.210</code></td></tr>
+            <tr><td>Nowgg</td><td>Games</td><td><code>69.164.251.212</code></td></tr>
+            <tr><td>Eagler</td><td>Minecraft</td><td><code>152.53.90.17</code></td></tr>
+            <tr><td>Petezah</td><td>Games</td><td><code>51.222.141.36</code></td></tr>
+            <tr><td>UniUB</td><td>Proxy</td><td><code>152.53.36.82</code></td></tr>
+            <tr><td>Truffled</td><td>Proxy, Games, Apps</td><td><code>205.209.125.106</code></td></tr>
+            <tr><td>Gn-math</td><td>Games</td><td><code>107.174.34.44</code></td></tr>
+            <tr><td>Vapor</td><td>Proxy, Games, Apps</td><td><code>159.195.59.55</code></td></tr>
+            <tr><td>CanLite</td><td>Proxy, Games, Apps</td><td><code>104.36.85.249</code></td></tr>
+            <tr><td>Saturn Proxy</td><td>Proxy, Games, Apps</td><td><code>74.208.174.33</code></td></tr>
+            <tr><td>Tinf0il</td><td>Proxy, Games, Apps</td><td><code>129.213.65.72</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

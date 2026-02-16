@@ -512,6 +512,315 @@ body::before {
   margin-bottom: 25px;
 }
 
+/* ===== Sections ===== */
+.section {
+  margin-bottom: 35px;
+}
+
+.section-title {
+  color: var(--text-primary);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.section-desc {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.pro-tip {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.pro-tip a {
+  color: var(--accent-light);
+}
+
+/* ===== Badges ===== */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 200px;
+  background-color: rgba(100, 100, 100, 0.3);
+  color: var(--text-secondary);
+}
+
+.badge.flourishing {
+  background-color: rgba(0, 180, 100, 0.15);
+  color: rgb(100, 220, 150);
+}
+
+.badge.stable {
+  background-color: rgba(0, 130, 200, 0.15);
+  color: rgb(100, 180, 230);
+}
+
+/* ===== Link Pills (for unblocker links) ===== */
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.link-pill {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--accent-light);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 200px;
+  padding: 8px 16px;
+  font-size: 13px;
+  transition: 0.2s;
+  word-break: break-all;
+}
+
+.link-pill:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.03);
+}
+
+/* ===== Link List (for movies, cheats, etc.) ===== */
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.link-card {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--accent-light);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 14px;
+  transition: 0.25s;
+  word-break: break-all;
+}
+
+.link-card:hover {
+  border-color: var(--accent-glow);
+  box-shadow: 0 0 6px 1px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+/* ===== Guide / Make Your Own Link Page ===== */
+.guide-page {
+  max-width: 900px;
+}
+
+.guide-toc {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin-bottom: 30px;
+}
+
+.guide-toc h3 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.guide-toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+.guide-toc li {
+  margin: 6px 0;
+}
+
+.guide-toc a {
+  color: var(--accent-light);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.guide-toc a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.guide-section {
+  margin-bottom: 40px;
+  padding-top: 15px;
+}
+
+.guide-section h2 {
+  color: var(--accent);
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.guide-note {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.guide-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 15px 18px;
+}
+
+.step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.step p {
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.step a {
+  color: var(--accent-light);
+}
+
+.step code {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: rgb(180, 210, 220);
+}
+
+.step-list {
+  list-style: disc;
+  margin: 8px 0 0 20px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.step-list li {
+  margin: 4px 0;
+}
+
+.step-list code {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: rgb(180, 210, 220);
+}
+
+.info-box {
+  background-color: rgba(0, 40, 60, 0.5);
+  border: 1px solid var(--accent-glow);
+  border-radius: 10px;
+  padding: 15px 18px;
+  margin-top: 15px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ===== IP Table ===== */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.ip-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.ip-table thead {
+  background-color: rgba(0, 30, 45, 0.8);
+}
+
+.ip-table th {
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.ip-table td {
+  padding: 10px 16px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ip-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.ip-table code {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: rgb(180, 210, 220);
+  font-size: 13px;
+  user-select: all;
+}
+
+/* ===== Code Block (for cheats) ===== */
+.code-block {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 8px;
+  overflow-x: auto;
+}
+
+.code-label {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.code-block code {
+  color: rgb(180, 220, 200);
+  font-size: 12px;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 700px) {
   .site-title {
@@ -548,5 +857,22 @@ body::before {
     flex-direction: column;
     gap: 5px;
     text-align: center;
+  }
+
+  .step {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ip-table {
+    font-size: 12px;
+  }
+
+  .ip-table th, .ip-table td {
+    padding: 8px 10px;
+  }
+
+  .quick-actions {
+    flex-wrap: wrap;
   }
 }
